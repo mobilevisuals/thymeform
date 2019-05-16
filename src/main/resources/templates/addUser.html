@@ -1,23 +1,26 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Add user</title>
-    <meta charset="UTF-8">
+    <!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:th="http://www.thymeleaf.org"
+          xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head> 
+        <meta charset="utf-8"/>
+        <title>Sample</title>
+        <link th:href="@{/resources/css/bootstrap.css}" rel="stylesheet" type="text/css"/>
+        <link th:href="@{/resources/css/bootstrap-theme.css}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 
 <h1>Add User</h1>
 
 <form action="#" th:action="@{/addUser}" th:object="${user}" method="post">
-    <p>
-        Name: <input type="text" th:field="*{name}">
-    </p>
-    <p>
-        Occupation: <input type="text" th:field="*{occupation}">
-    </p>
-    <p>
-        <input type="submit" value="Submit"/> <input type="reset" value="Reset">
-    </p>
+   
+        Name: <input type="text" th:field="*{name}"></input>
+   
+        Occupation: <input type="text" th:field="*{occupation}"></input>
+   
+   
+        <input type="submit" value="Submit"/> <input type="reset" value="Reset"/>
+    
 </form>
 
 </body>
